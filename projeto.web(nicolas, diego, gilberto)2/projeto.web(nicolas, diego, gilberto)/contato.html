@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo Cultural | Contato</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-film"></i>
+                <h1>Catálogo Cultural</h1>
+            </div>
+            
+            <nav class="nav-principal">
+                <button class="menu-toggle" aria-label="Menu mobile">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="menu">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="catalogo.html">Catálogo</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="contato.html" class="ativo">Contato</a></li>
+                </ul>
+            </nav>
+            
+            <div class="controles">
+                <button class="btn-tema" aria-label="Alternar tema">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="principal">
+        <section class="contato-hero container">
+            <h1>Entre em Contato</h1>
+            <p>Tem dúvidas, sugestões ou quer contribuir com nosso catálogo? Fale conosco!</p>
+        </section>
+
+        <section class="contato-conteudo container">
+            <div class="contato-info">
+                <h2>Informações de Contato</h2>
+                
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h3>Endereço</h3>
+                        <p>Rua Leocádio Gomes da Silva, 87<br>Catolé, Campina Grande - PB<br>CEP: 58410-270</p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h3>Telefone</h3>
+                        <p>(83) 9999-9999</p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h3>Email</h3>
+                        <p>contato@catalogocultural.com</p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <h3>Horário de Atendimento</h3>
+                        <p>Segunda a Sexta: 9h às 18h<br>Sábado: 9h às 13h</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Formulário (Requisito) -->
+            <div class="contato-formulario">
+                <h2>Envie sua Mensagem</h2>
+                <form id="formContato">
+                    <div class="form-group">
+                        <label for="nome">Nome Completo *</label>
+                        <input type="text" id="nome" name="nome" required 
+                               placeholder="Digite seu nome completo"
+                               pattern="[A-Za-zÀ-ÿ\s]{3,50}">
+                        <div class="erro" id="erro-nome"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required
+                               placeholder="seu@email.com">
+                        <div class="erro" id="erro-email"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" id="telefone" name="telefone"
+                               placeholder="(11) 99999-9999"
+                               pattern="\(?\d{2}\)?\s?\d{4,5}-?\d{4}">
+                        <div class="erro" id="erro-telefone"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="assunto">Assunto *</label>
+                        <select id="assunto" name="assunto" required>
+                            <option value="" disabled selected>Selecione um assunto</option>
+                            <option value="sugestao">Sugestão de conteúdo</option>
+                            <option value="critica">Crítica ou elogio</option>
+                            <option value="parceria">Proposta de parceria</option>
+                            <option value="tecnico">Problema técnico</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                        <div class="erro" id="erro-assunto"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem *</label>
+                        <textarea id="mensagem" name="mensagem" required
+                                  placeholder="Digite sua mensagem aqui..."
+                                  rows="5"></textarea>
+                        <div class="erro" id="erro-mensagem"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            Desejo receber novidades por email
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="btn-primario btn-enviar">
+                        <i class="fas fa-paper-plane"></i> Enviar Mensagem
+                    </button>
+                    
+                    <div id="mensagem-sucesso" class="mensagem-sucesso"></div>
+                </form>
+            </div>
+        </section>
+
+        <!-- FAQ Interativo -->
+        <section class="faq container">
+            <h2>Perguntas Frequentes</h2>
+            <div class="faq-lista">
+                <div class="faq-item">
+                    <button class="faq-pergunta">
+                        Como posso sugerir um item para o catálogo?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-resposta">
+                        <p>Utilize nosso formulário de contato selecionando a opção "Sugestão de conteúdo". Nossa equipe analisará a sugestão e entrará em contato.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-pergunta">
+                        O catálogo é gratuito?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-resposta">
+                        <p>Sim, todo o conteúdo do Catálogo Cultural é completamente gratuito para acesso e consulta.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-pergunta">
+                        Com que frequência o catálogo é atualizado?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-resposta">
+                        <p>Atualizamos semanalmente com novos lançamentos e mensalmente com grandes atualizações do acervo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <footer class="rodape">
+        <div class="container">
+            <div class="rodape-conteudo">
+                <div class="rodape-info">
+                    <h3>Catálogo Cultural</h3>
+                    <p>Descubra as melhores recomendações de entretenimento.</p>
+                </div>
+                
+                <div class="rodape-links">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="catalogo.html">Catálogo</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="rodape-social">
+                    <h4>Siga-nos</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="rodape-copyright">
+                <p>&copy; 2025 Catálogo Cultural. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="btn-topo" aria-label="Voltar ao topo">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

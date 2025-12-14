@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo Cultural | Catálogo Completo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-film"></i>
+                <h1>Catálogo Cultural</h1>
+            </div>
+            
+            <nav class="nav-principal">
+                <button class="menu-toggle" aria-label="Menu mobile">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="menu">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="catalogo.html" class="ativo">Catálogo</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+            
+            <div class="controles">
+                <button class="btn-tema" aria-label="Alternar tema">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="principal">
+        <section class="catalogo-header container">
+            <h1>Catálogo Completo</h1>
+            <p>Explore nossa coleção completa de filmes e séries</p>
+            
+            <div class="catalogo-filtros">
+                <div class="busca">
+                    <input type="text" id="busca" placeholder="Buscar por título, autor ou gênero..." class="catalogo-busca">
+                    <button class="btn-busca"><i class="fas fa-search"></i></button>
+                </div>
+                
+                <div class="filtro-select">
+                    <select id="filtro-categoria">
+                        <option value="todos">Todas Categorias</option>
+                        <option value="filmes">Filmes</option>
+                        <option value="series">Séries</option>
+                    </select>
+                    
+                    <select id="filtro-genero">
+                        <option value="todos">Todos Gêneros</option>
+                        <option value="ação">Ação</option>
+                        <option value="aventura">Aventura</option>
+                        <option value="biografia">Biografia</option>
+                        <option value="comédia">Comédia</option>
+                        <option value="drama">Drama</option>
+                        <option value="fantasia">Fantasia</option>
+                        <option value="ficção">Ficção Científica</option>
+                        <option value="mistério">Mistério</option>
+                        <option value="romance">Romance</option>
+                        <option value="suspense">Suspense</option>
+                        <option value="terror">Terror</option>
+                    </select>
+                    
+                    <button class="btn-limpar">Limpar Filtros</button>
+
+                    <button id="filtro-favoritos" class="btn-favoritos-toggle">❤️ Favoritos</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="catalogo-itens container">
+            <div class="catalogo-info">
+                <p>Mostrando <span id="contador-itens">0</span> itens</p>
+                <div class="ordenar">
+                    <label for="ordenar">Ordenar por:</label>
+                    <select id="ordenar">
+                        <option value="nome">Nome (A-Z)</option>
+                        <option value="ano">Ano (Mais Recente)</option>
+                        <option value="avaliacao">Avaliação</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="grid-catalogo">
+                <!-- Itens serão carregados via JavaScript -->
+            </div>
+            
+            <div class="paginacao">
+                <button class="btn-pagina anterior">Anterior</button>
+                <span class="pagina-atual">Página 1 de 1</span>
+                <button class="btn-pagina proximo">Próximo</button>
+            </div>
+        </section>
+
+        <!-- Iframe (Requisito Avançado) -->
+        <section class="destaque-video container">
+            <h2>Destaque da Semana: Trailer</h2>
+            <div class="video-container">
+                <iframe 
+                    src="https://youtube.com/embed/0hc8yz5-d5Y" 
+                    title="Trailer de exemplo" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <div class="container">
+            <div class="rodape-conteudo">
+                <div class="rodape-info">
+                    <h3>Catálogo Cultural</h3>
+                    <p>Descubra as melhores recomendações de entretenimento.</p>
+                </div>
+                
+                <div class="rodape-links">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="catalogo.html">Catálogo</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="rodape-social">
+                    <h4>Siga-nos</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="rodape-copyright">
+                <p>&copy; 2025 Catálogo Cultural. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="btn-topo" aria-label="Voltar ao topo">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

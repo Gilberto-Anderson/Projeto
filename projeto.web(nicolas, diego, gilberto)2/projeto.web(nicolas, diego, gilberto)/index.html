@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Catálogo de filmes, séries e lançamentos com filtros, destaques e novidades.">
+    <title>Catálogo Cultural | Início</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="cabecalho">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-film"></i>
+                <h1>Catálogo Cultural</h1>
+            </div>
+            
+            <!-- Menu de Navegação -->
+            <nav class="nav-principal">
+                <button class="menu-toggle" aria-label="Menu mobile">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="menu">
+                    <li><a href="index.html" class="ativo">Início</a></li>
+                    <li><a href="catalogo.html">Catálogo</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+            
+            <div class="controles">
+                <button class="btn-tema" aria-label="Alternar tema">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="principal">
+        <!-- Seção Hero -->
+        <section class="hero">
+            <div class="container">
+                <h2>Descubra. Explore. Inspire-se.</h2>
+                <p>O maior catálogo de filmes e séries selecionados para você.</p>
+                <a href="catalogo.html" class="btn-primario">Explorar Catálogo</a>
+            </div>
+        </section>
+
+        <!-- Seção Destaques -->
+        <section class="destaques container">
+            <h2>Destaques da Semana</h2>
+            <div class="filtros">
+                <button class="filtro-btn ativo" data-categoria="todos">Todos</button>
+                <button class="filtro-btn" data-categoria="filmes">Filmes</button>
+                <button class="filtro-btn" data-categoria="series">Séries</button>
+            </div>
+            
+            <div class="grid-destaques">
+                <!-- Itens serão carregados via JavaScript -->
+            </div>
+        </section>
+
+        <!-- Seção Estatísticas -->
+        <section class="estatisticas">
+            <div class="container">
+                <h2>Nosso Acervo</h2>
+                <div class="grid-estatisticas">
+                    <div class="card-estatistica">
+                        <i class="fas fa-film"></i>
+                        <h3>10</h3>
+                        <p>Filmes Catalogados</p>
+                    </div>
+                    <div class="card-estatistica">
+                        <i class="fas fa-series"></i>
+                        <h3>10</h3>
+                        <p>Séries Catalogadas</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Table (Requisito) -->
+        <section class="tabela container">
+            <h2>Próximos Lançamentos</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Título</th>
+                        <th>Categoria</th>
+                        <th>Data de Lançamento</th>
+                        <th>Gênero</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Wake Up Dead Man: A Knives Out Mystery</td>
+                        <td>Filme</td>
+                        <td>26/11/2025</td>
+                        <td>Comédia, Drama, Mistério, Policial, Suspense</td>
+                    </tr>
+                    <tr>
+                        <td>Avatar: The Last Airbender: Season 2 </td>
+                        <td>Série</td>
+                        <td>2026</td>
+                        <td>Drama, Fantasia, Mistério</td>
+                    </tr>
+                    <tr>
+                        <td>Terror em Silent Hill: Regresso para o Inferno</td>
+                        <td>Filme</td>
+                        <td>23/01/2026</td>
+                        <td>Drama, Mistério, Romance, Terror</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="rodape">
+        <div class="container">
+            <div class="rodape-conteudo">
+                <div class="rodape-info">
+                    <h3>Catálogo Cultural</h3>
+                    <p>Descubra as melhores recomendações de entretenimento.</p>
+                </div>
+                
+                <div class="rodape-links">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="catalogo.html">Catálogo</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="rodape-social">
+                    <h4>Siga-nos</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="rodape-copyright">
+                <p>&copy; 2025 Catálogo Cultural. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão Voltar ao Topo -->
+    <button class="btn-topo" aria-label="Voltar ao topo">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
